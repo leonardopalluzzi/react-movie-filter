@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Filter from './Filter'
 
 export default function Main({ data }) {
     //genres array
@@ -9,8 +10,6 @@ export default function Main({ data }) {
     console.log(filter);
 
     console.log(data);
-
-
 
     useEffect(() => {
         if (filter !== 'all') {
@@ -27,8 +26,8 @@ export default function Main({ data }) {
     return (
         <>
             <div>main</div>
-
-            <div className="mb-3">
+            <Filter setFilter={setFilter} filter={filter} genres={genres} />
+            {/* <div className="mb-3">
                 <label htmlFor="" className="form-label">Select a genre</label>
                 <select
                     className="form-select form-select-lg"
@@ -44,7 +43,7 @@ export default function Main({ data }) {
 
                 </select>
 
-            </div >
+            </div > */}
 
 
 

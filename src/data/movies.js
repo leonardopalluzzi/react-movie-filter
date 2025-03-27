@@ -5,7 +5,6 @@ const movies = [
     { title: 'Batman', genre: 'Azione' },
     { title: 'Interstellar', genre: 'Fantascienza' },
     { title: 'Pulp Fiction', genre: 'Thriller' },
-    { title: 'Pulp Fiction', genre: 'cicciogamer' }
 ]
 
 export default movies
