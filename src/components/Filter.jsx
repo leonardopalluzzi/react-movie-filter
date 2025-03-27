@@ -1,11 +1,11 @@
-export default function Filter({ setFilter, filter, genres, title, handleSearch }) {
+export default function Filter({ setFilter, filter, genres, title, setTitle }) {
     return (
         <div className="container my-3">
 
             <div className="title_filter">
                 <input
                     className="form-control"
-                    onChange={(e) => handleSearch(e.target.value, title)}
+                    onChange={(e) => setTitle(e.target.value)}
                     type="text" value={title}
                     placeholder="Search by title" />
             </div>
@@ -23,11 +23,8 @@ export default function Filter({ setFilter, filter, genres, title, handleSearch 
                     {genres.map((item, i) =>
                         <option key={i} value={item}>{item}</option>
                     )}
-
                 </select>
             </div>
-
-
         </div >
     )
 }
