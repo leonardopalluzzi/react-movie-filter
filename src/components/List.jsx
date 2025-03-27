@@ -4,8 +4,8 @@ export default function List({ filterList }) {
             <ul className="movie_list row gy-4" >
                 {
                     filterList.map((movie, i) => (
-                        <div className="col-4">
-                            <li className="card movie mx-4 p-4" key={`${movie.title}_${movie.genre}`}>
+                        <div key={`${movie.title}_${movie.genre}`} className="col-4">
+                            <li className="card movie mx-4 p-4" >
                                 <h3>{movie.title}</h3>
                                 <span>{movie.genre}</span>
                             </li>
