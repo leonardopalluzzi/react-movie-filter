@@ -11,7 +11,7 @@ export default function Filter({ setFilter, filter, genres, title, setTitle }) {
             </div>
 
             <div className="genre_filter">
-                <label htmlFor="" className="form-label">Select a genre</label>
+                <label htmlFor="" className="form-label text-white">Select a genre</label>
                 <select
                     className="form-select form-select-lg"
                     name=""
@@ -19,7 +19,7 @@ export default function Filter({ setFilter, filter, genres, title, setTitle }) {
                     onChange={(e) => setFilter(e.target.value)}
                     value={filter}
                 >
-                    <option value="all">Select a genre</option>
+                    <option value="all">View All</option>
                     {genres.map((item, i) =>
                         <option key={i} value={item}>{item}</option>
                     )}

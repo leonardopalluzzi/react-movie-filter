@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #1b1724be;
+}
+
 header {
   background-color: lightgrey;
 }

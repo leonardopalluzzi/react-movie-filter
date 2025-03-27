@@ -38,20 +38,26 @@ export default function Main({ data }) {
     function handleSubmit(e) {
         e.preventDefault()
 
-        setMovies([...movies, {
-            title: newMovieTitle,
-            genre: newMovieGenre
-        }])
+        if (newMovieGenre && newMovieTitle) {
+            setMovies([...movies, {
+                title: newMovieTitle,
+                genre: newMovieGenre
+            }])
 
-        if (!genresList.includes(newMovieGenre)) {
-            genresList.push(newMovieGenre)
+            if (!genresList.includes(newMovieGenre)) {
+                genresList.push(newMovieGenre)
+            }
+            setNewMovieTitle('')
+            setNewMovieGenre('')
+
+            setGenres(genresList)
+            console.log(movies);
+            console.log(genres);
+        } else {
+            alert('Per favore compialre i campi richesti')
         }
-        setNewMovieTitle('')
-        setNewMovieGenre('')
 
-        setGenres(genresList)
-        console.log(movies);
-        console.log(genres);
+
 
     }
 
@@ -71,8 +77,8 @@ export default function Main({ data }) {
         <>
             <Add handleSubmit={handleSubmit} newMovieGenre={newMovieGenre} setNewMovieGenre={setNewMovieGenre} newMovieTitle={newMovieTitle} setNewMovieTitle={setNewMovieTitle} />
             {/* stampa lista  */}
-            <List filterList={filterList} />
             <Filter title={title} setTitle={setTitle} setFilter={setFilter} filter={filter} genres={genres} />
+            <List filterList={filterList} />
         </>
     )
 }
