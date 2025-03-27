@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import data from './data/movies'
 import Main from './components/Main'
 function App() {
