@@ -1,6 +1,6 @@
 export default function Filter({ setFilter, filter, genres }) {
     return (
-        <div className="mb-3">
+        <div className="container my-3">
             <label htmlFor="" className="form-label">Select a genre</label>
             <select
                 className="form-select form-select-lg"

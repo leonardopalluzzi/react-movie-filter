@@ -4,7 +4,9 @@ function App() {
 
   return (
     <>
-      <h1>Movies</h1>
+      <header>
+        <h1 className='p-4'>Movies</h1>
+      </header>
       <Main data={data} />
     </>
   )

@@ -22,10 +22,9 @@ export default function Main({ data }) {
 
     return (
         <>
-            <div>main</div>
-            <Filter setFilter={setFilter} filter={filter} genres={genres} />
             {/* stampa lista  */}
             <List filterList={filterList} />
+            <Filter setFilter={setFilter} filter={filter} genres={genres} />
         </>
     )
 }
